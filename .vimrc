@@ -30,8 +30,10 @@ if has("gui_running")	" GUI color and font settings
  "highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
 endif
 
+set background=dark 
 set t_Co=256          " 256 color mode
-colorscheme molokai
+colorscheme gruvbox 
+"colorscheme molokai 
 
 set clipboard=unnamed	" yank to the system register (*) by default
 set showmatch		" Cursor shows matching ) and }
@@ -64,6 +66,7 @@ set tm=500
    au FileType Makefile set noexpandtab
 "}      							
 
+
 "--------------------------------------------------------------------------- 
 " ENCODING SETTINGS
 "--------------------------------------------------------------------------- 
@@ -90,7 +93,6 @@ fun! Big5()
 endfun
 
 
-
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -108,6 +110,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/neosnippet.vim'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'tomasr/molokai'
+Plugin 'morhetz/gruvbox'
 Plugin 'garyburd/go-explorer'
 
 Plugin 'scrooloose/nerdtree'
@@ -123,6 +126,8 @@ Plugin 'xolox/vim-session'
 Plugin 'sjl/gundo.vim'
 Plugin 'vim-scripts/TaskList.vim'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 
 
 Plugin 'moll/vim-node'
@@ -140,6 +145,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'epilande/vim-es2015-snippets'
 Plugin 'epilande/vim-react-snippets'
 Plugin 'SirVer/ultisnips'
+
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
